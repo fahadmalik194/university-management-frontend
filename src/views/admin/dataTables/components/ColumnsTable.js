@@ -57,12 +57,15 @@ export default function ColumnsTable(props) {
       <Flex px='25px' justify='space-between' mb='20px' align='center'>
         <Text
           color={textColor}
-          fontSize='22px'
+          fontSize='20px'
           fontWeight='700'
-          lineHeight='100%'>
-          4-Column Table
+          lineHeight='100%'
+          mt='10px'
+          mb='10px'
+          >
+          STUDENT VIEW
         </Text>
-        <Menu />
+        {/* <Menu /> */}
       </Flex>
       <Table {...getTableProps()} variant='simple' color='gray.500' mb='24px'>
         <Thead>
@@ -101,31 +104,78 @@ export default function ColumnsTable(props) {
                         </Text>
                       </Flex>
                     );
-                  } else if (cell.column.Header === "PROGRESS") {
+                  } else if (cell.column.Header === "DESCRIPTION") {
                     data = (
                       <Flex align='center'>
-                        <Text
-                          me='10px'
-                          color={textColor}
-                          fontSize='sm'
-                          fontWeight='700'>
-                          {cell.value}%
+                        <Text color={textColor} fontSize='sm' fontWeight='700'>
+                          {cell.value}
                         </Text>
                       </Flex>
                     );
-                  } else if (cell.column.Header === "QUANTITY") {
+                  } else if (cell.column.Header === "SUBMISSION STATUS") {
                     data = (
-                      <Text color={textColor} fontSize='sm' fontWeight='700'>
-                        {cell.value}
-                      </Text>
+                      <Flex align='center'>
+                        <Text color={textColor} fontSize='sm' fontWeight='700'>
+                          {cell.value}
+                        </Text>
+                      </Flex>
                     );
-                  } else if (cell.column.Header === "DATE") {
+                  } else if (cell.column.Header === "SUBMISSION DATE") {
                     data = (
-                      <Text color={textColor} fontSize='sm' fontWeight='700'>
-                        {cell.value}
-                      </Text>
+                      <Flex align='center'>
+                        <Text color={textColor} fontSize='sm' fontWeight='700'>
+                          {cell.value}
+                        </Text>
+                      </Flex>
+                    );
+                  } else if (cell.column.Header === "DUE DATE") {
+                    data = (
+                      <Flex align='center'>
+                        <Text color={textColor} fontSize='sm' fontWeight='700'>
+                          {cell.value}
+                        </Text>
+                      </Flex>
+                    );
+                  } else if (cell.column.Header === "CREATED AT") {
+                    data = (
+                      <Flex align='center'>
+                        <Text color={textColor} fontSize='sm' fontWeight='700'>
+                          {cell.value}
+                        </Text>
+                      </Flex>
+                    );
+                  } else if (cell.column.Header === "ACTIONS") {
+                    data = (
+                      <Flex align='center'>
+                        <Menu/>
+                      </Flex>
                     );
                   }
+                  // else if (cell.column.Header === "DESCRIPTION") {
+                  //   data = (
+                  //     <Flex align='center'>
+                  //       <Text
+                  //         me='10px'
+                  //         color={textColor}
+                  //         fontSize='sm'
+                  //         fontWeight='700'>
+                  //         {cell.value}
+                  //       </Text>
+                  //     </Flex>
+                  //   );
+                  // } else if (cell.column.Header === "QUANTITY") {
+                  //   data = (
+                  //     <Text color={textColor} fontSize='sm' fontWeight='700'>
+                  //       {cell.value}
+                  //     </Text>
+                  //   );
+                  // } else if (cell.column.Header === "DATE") {
+                  //   data = (
+                  //     <Text color={textColor} fontSize='sm' fontWeight='700'>
+                  //       {cell.value}
+                  //     </Text>
+                  //   );
+                  // }
                   return (
                     <Td
                       {...cell.getCellProps()}

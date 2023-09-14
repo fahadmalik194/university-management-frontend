@@ -42,16 +42,86 @@ export const columnsDataColumns = [
     accessor: "name",
   },
   {
-    Header: "PROGRESS",
-    accessor: "progress",
+    Header: "DESCRIPTION",
+    accessor: "description",
   },
   {
-    Header: "QUANTITY",
-    accessor: "quantity",
+    Header: "SUBMISSION STATUS",
+    accessor: "submission-status",
   },
   {
-    Header: "DATE",
-    accessor: "date",
+    Header: "SUBMISSION DATE",
+    accessor: "submission-date",
+  },
+  {
+    Header: "DUE DATE",
+    accessor: "due-date",
+  },
+  {
+    Header: "CREATED AT",
+    accessor: "created-at",
+  },
+  {
+    Header: "ACTIONS",
+    accessor: "actions",
+  },
+];
+
+export const columnsStudentColumns = [
+  {
+    Header: "NAME",
+    accessor: "name",
+  },
+  {
+    Header: "DESCRIPTION",
+    accessor: "description",
+  },
+  {
+    Header: "SUBMISSION STATUS",
+    accessor: "submission-status",
+  },
+  {
+    Header: "SUBMISSION DATE",
+    accessor: "submission-date",
+  },
+  {
+    Header: "DUE DATE",
+    accessor: "due-date",
+  },
+  {
+    Header: "CREATED AT",
+    accessor: "created-at",
+  },
+  {
+    Header: "ACTIONS",
+    accessor: "actions",
+  },
+];
+
+export const columnsIntructorColumns = [
+  {
+    Header: "NAME",
+    accessor: "name",
+  },
+  {
+    Header: "DESCRIPTION",
+    accessor: "description",
+  },
+  {
+    Header: "DUE DATE",
+    accessor: "due-date",
+  },
+  {
+    Header: "CREATED AT",
+    accessor: "created-at",
+  },
+  {
+    Header: "UPDATED AT",
+    accessor: "updated-at",
+  },
+  {
+    Header: "ACTIONS",
+    accessor: "actions",
   },
 ];
 

@@ -1,0 +1,35 @@
+[
+    {
+      "name":"Assignment 1",
+      "description": "This is a description", 
+      "due-date": "25.Sep.2023",
+      "created-at": "10.Sep.2023",
+      "updated-at": "10.Sep.2023",
+      "actions": ""
+    },
+    {
+        "name":"Assignment 2",
+        "description": "This is a description", 
+        "due-date": "25.Sep.2023",
+        "created-at": "10.Sep.2023",
+        "updated-at": "10.Sep.2023",
+        "actions": ""
+    },
+    {
+        "name":"Assignment 3",
+        "description": "This is a description", 
+        "due-date": "25.Sep.2023",
+        "created-at": "10.Sep.2023",
+        "updated-at": "10.Sep.2023",
+        "actions": ""
+    },
+    {
+        "name":"Assignment 4",
+        "description": "This is a description", 
+        "due-date": "25.Sep.2023",
+        "created-at": "10.Sep.2023",
+        "updated-at": "10.Sep.2023",
+        "actions": ""
+    }
+]
+  

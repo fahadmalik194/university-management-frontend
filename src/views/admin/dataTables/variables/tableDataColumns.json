@@ -1,26 +1,38 @@
 [
   {
-    "name":"Marketplace",
-    "quantity": 2458, 
-    "date": "12.Jan.2021",
-    "progress": 75.5  
+    "name":"Assignment 1",
+    "description": "This is a description", 
+    "submission-status": "Pending",
+    "submission-date": "15.Sep.2023",
+    "due-date": "25.Sep.2023",
+    "created-at": "10.Sep.2023",
+    "actions": ""
   },
   {
-    "name":"Venus DB PRO",
-    "quantity": 1485, 
-    "date": "21.Feb.2021",
-    "progress": 35.4  
+    "name":"Assignment 2",
+    "description": "This is a description", 
+    "submission-status": "Pending",
+    "submission-date": "15.Sep.2023",
+    "due-date": "25.Sep.2023",
+    "created-at": "10.Sep.2023",
+    "actions": ""
   },
   {
-    "name":"Venus DS",
-    "quantity": 1024, 
-    "date": "13.Mar.2021",
-    "progress": 25  
+    "name":"Assignment 3",
+    "description": "This is a description", 
+    "submission-status": "Pending",
+    "submission-date": "15.Sep.2023",
+    "due-date": "25.Sep.2023",
+    "created-at": "10.Sep.2023",
+    "actions": ""
   },
   {
-    "name":"Venus 3D Asset",
-    "quantity": 858, 
-    "date": "24.Jan.2021",
-    "progress": 100  
+    "name":"Assignment 4",
+    "description": "This is a description", 
+    "submission-status": "Pending",
+    "submission-date": "15.Sep.2023",
+    "due-date": "25.Sep.2023",
+    "created-at": "10.Sep.2023",
+    "actions": ""
   }
 ]

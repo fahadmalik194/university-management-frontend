@@ -131,6 +131,21 @@ function isEditableAssignment(dueDate, currentDate) {
   return differenceInDays < 5;
 }
 
+function formatDateTime(dateTimeString) {
+  const options = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+  const formattedDate = new Date(dateTimeString).toLocaleDateString(
+    "en-US",
+    options
+  );
+  return formattedDate;
+}
+
 export default function InstructorTable() {
   const [selectedAssignment, setSelectedAssignment] = React.useState();
   const [currentDate, setCurrentDate] = React.useState(new Date());
@@ -268,6 +283,7 @@ export default function InstructorTable() {
     setViewModalOpen(true);
   };
   const closeViewModal = () => {
+    fetchAssignmentsData();
     setViewModalOpen(false);
   };
 
@@ -305,10 +321,7 @@ export default function InstructorTable() {
   useEffect(()=>{
     if(submissionDetail.length > 0){
       openViewModal();
-      console.log("submissionDetail2", submissionDetail);
-
     }
-    
   }, [submissionDetail])
   const columns = columnsIntructorColumns;
   const data = tableData;
@@ -707,6 +720,7 @@ export default function InstructorTable() {
                       <Th>Submission Status</Th>
                       <Th>Submission Date</Th>
                       <Th>Due Date</Th>
+                      <Th>Created At</Th>
                     </Tr>
                   </Thead>
                   <Tbody>
@@ -715,8 +729,9 @@ export default function InstructorTable() {
                       <Tr key={element.id}>
                         <Td>{element.submitted_assignments.name}</Td>
                         <Td>{element.submission_status}</Td>
-                        <Td>{element.submission_date}</Td>
-                        <Td>{element.assignments.due_date}</Td>
+                        <Td>{(element.submission_date) ? formatDateTime(element.submission_date) : '-'}</Td>
+                        <Td>{formatDateTime(element.assignments.due_date)}</Td>
+                        <Td>{formatDateTime(element.assignments.created_at)}</Td>
                       </Tr>
                     ))}
                   </Tbody>

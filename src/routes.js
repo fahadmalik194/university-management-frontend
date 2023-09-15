@@ -24,7 +24,7 @@ let dashboardName;
 const userDetail = localStorage.getItem('userDetail');
 if(userDetail){
   const userDetailParsed = JSON.parse(userDetail);
-  (userDetailParsed.role === 'student') ? dashboardName = 'Student Dashboard' : dashboardName = 'Instructor Dashboard';
+  (userDetailParsed.role === "student") ? dashboardName = 'Student Dashboard' : dashboardName = 'Instructor Dashboard';
 } else {
   dashboardName = 'Main Dashboard';
 }

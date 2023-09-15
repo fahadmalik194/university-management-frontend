@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const defaultBaseURL = 'http://localhost:3001';
+const defaultBaseURL = 'http://localhost:8000';
 const backendBaseURL = process.env.BACKEND_BASE_URL || defaultBaseURL;
 
 const httpService = axios.create({

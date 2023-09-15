@@ -29,17 +29,17 @@ import { FcGoogle } from "react-icons/fc";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
 // Custom Service
-import { post } from "services/httpService";
+import { post } from "services/httpAuthService";
 
 async function loginAPI({email, password}) {
   if (!email || !password) {
     return;
   }
   try {
-    const response = await post("/api/v1/login", { email, password });
-    if (response.statusCode === 200) {
-      localStorage.setItem("token", response.token);
-      localStorage.setItem("userDetail", JSON.stringify(response.user));
+    const response = await post("/auth/login", { email, password });
+    if (response.code === 200) {
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("userDetail", JSON.stringify(response.data.user));
 
       toast.success('Login Successful: You are now logged in!');
       setTimeout(() => {
